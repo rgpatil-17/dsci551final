@@ -109,16 +109,27 @@ team_id,team_name,city
 project
 
 |
+
 |__ functions
+
 |       |___ data_modifier.py     # Modify Data
+
 |       |___ query_modifier.py    # Read Data
+
 |       |___ schema_explorer.py   # Explore Schema
+
 |__ config.py                     # Configurations File
+
 |__ llm.py                        # Connection to llm
+
 |__ index.py                      # Main entry point
-|__ README.md                     # You're reading this 
+
+|__ README.md                     # You're reading this
+
 |__ .env.development              # environment variables
+
 |__ requirements.txt              # includes Python dependencies
+
 
 
 ## Contributing
