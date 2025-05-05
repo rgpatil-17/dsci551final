@@ -111,8 +111,6 @@ project
 
 |__ app
 
-|   |
-
 |   |__ functions
 
 |   |   |__ data_modifier.py         # Modify Data  
