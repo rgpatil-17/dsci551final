@@ -31,6 +31,8 @@ def execute_query(natural_language_query: str):
             sql_query = sql_query[2:-2]
     if "```sql" in sql_query.lower():
         sql_query = extract_sql_query(sql_query)
+    if "```mysql" in sql_query.lower():
+        sql_query = extract_sql_query(sql_query, 'mysql')
     print("after formatting ", sql_query)
     if any(x in sql_query for x in ["INSERT", "insert", "DELETE", "delete", "UPDATE", "update", "DROP", "drop", "ALTER", "alter"]):
          return {

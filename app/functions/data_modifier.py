@@ -29,6 +29,8 @@ def modify_data(natural_language_command: str):
             sql_query = sql_query[5:-2]
         if sql_query.startswith("``") and sql_query.endswith("``"):
             sql_query = sql_query[2:-2]
+        if "```mysql" in sql_query.lower():
+            sql_query = extract_sql_query(sql_query, 'mysql')
         # strip funciton removed white spaces start and end and removes back tape
         if "```sql" in sql_query.lower():
             sql_query = extract_sql_query(sql_query)

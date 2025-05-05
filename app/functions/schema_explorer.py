@@ -5,8 +5,8 @@ from sqlalchemy import text
 from app.config import ENGINE
 from app.llm import generate_sql
 
-def extract_sql_query(input_text):
-     match = re.search(r"```sql\s*(.*?)\s*```", input_text, re.DOTALL | re.IGNORECASE)
+def extract_sql_query(input_text, uri = 'sql'):
+     match = re.search(rf"```{uri}\s*(.*?)\s*```", input_text, re.DOTALL | re.IGNORECASE)
      if match:
           return match.group(1).strip()
      return input_text
@@ -32,6 +32,8 @@ def explore_schema(user_question: str):
         sql_query = sql_query[1:-1]
     if sql_query.startswith("``sql") and sql_query.endswith("``"):
         sql_query = sql_query[5:-2]
+    if "```mysql" in sql_query.lower():
+        sql_query = extract_sql_query(sql_query, 'mysql')
     if sql_query.startswith("``") and sql_query.endswith("``"):
             sql_query = sql_query[2:-2]
     if "```sql" in sql_query.lower():
