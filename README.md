@@ -109,17 +109,29 @@ team_id,team_name,city
 project/
 │
 ├── app/
+
 │   ├── functions/
+
 │   │   ├── data_modifier.py       # Modify Data
+
 │   │   ├── query_modifier.py      # Read Data
+
 │   │   └── schema_explorer.py     # Explore Schema
+
 │   ├── config.py                  # Configurations File
+
 │   ├── llm.py                     # Connection to llm
+
 │   └── index.py                   # Main entry point
+
 ├── .gitignore                    # GitIgnore
+
 ├── README.md                     # You're reading this
+
 ├── .env.development              # Environment variables
+
 └── requirements.txt              # Includes Python dependencies
+
 
 
 ## Contributing
