@@ -28,7 +28,7 @@ a working [Python 3.10](https://www.python.org/downloads/) installation on your 
 - To setup the project please follow the following steps :
 
 ### 1. Clone the Repository
-`git clone https://github.com/your-username/nl2sql.git`
+`git clone https://github.com/rgpatil-17/dsci551final.git`
 
 ### 2. Create and Activate Virtual Environment
 `python -m venv venv`
@@ -90,9 +90,20 @@ This will start the service (CLI or web-based depending on your implementation).
 Copy the url and paste on the browser and it will let you enter natural language commands.
 
 ## Example Usage
-- Input: “Show me all users who signed up last week”
+- Input: “Show me all teams with their ids and cities”
 
-- SQL Generated: SELECT * FROM users WHERE signup_date >= DATE_SUB(CURDATE(), INTERVAL 7 DAY);
+- SQL Generated: SELECT team_id, city, team_name FROM teams; 
+
+- Output: 
+team_id,team_name,city
+200,"Atlanta Hawks",Atlanta
+201,"Boston Celtics",Boston
+202,"Brooklyn Nets",Brooklyn
+203,"Charlotte Hornets",Charlotte
+204,"Chicago Bulls",Chicago
+205,"Cleveland Cavaliers",Cleveland
+
+
 
 ## Project Structure
 project
