@@ -107,22 +107,27 @@ team_id,team_name,city
 
 ## Project Structure
 project
+|
+
+|__ app
 
 |
 
-|__ functions
+|_________|___ functions
 
-|_______|___ data_modifier.py     # Modify Data
+|_______|_________|___ data_modifier.py     # Modify Data
 
-|_______|___ query_modifier.py    # Read Data
+|_______|_________|___ query_modifier.py    # Read Data
 
-|_______|___ schema_explorer.py   # Explore Schema
+|_______|_________|___ schema_explorer.py   # Explore Schema
 
-|__ config.py                     # Configurations File
+|_________|___ config.py                     # Configurations File
 
-|__ llm.py                        # Connection to llm
+|_________|___ llm.py                        # Connection to llm
 
 |__ index.py                      # Main entry point
+
+|__ .gitignore                    # GitIgnore 
 
 |__ README.md                     # You're reading this
 
