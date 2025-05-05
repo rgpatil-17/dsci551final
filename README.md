@@ -112,11 +112,11 @@ project
 
 |__ functions
 
-|       |___ data_modifier.py     # Modify Data
+|_______|___ data_modifier.py     # Modify Data
 
-|       |___ query_modifier.py    # Read Data
+|_______|___ query_modifier.py    # Read Data
 
-|       |___ schema_explorer.py   # Explore Schema
+|_______|___ schema_explorer.py   # Explore Schema
 
 |__ config.py                     # Configurations File
 
