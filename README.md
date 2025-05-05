@@ -106,35 +106,20 @@ team_id,team_name,city
 
 
 ## Project Structure
-project
-|
-
-|__ app
-
-|
-
-|_________|___ functions
-
-|_________|___|_________|___ data_modifier.py     # Modify Data
-
-|_________|___|_________|___ query_modifier.py    # Read Data
-
-|_________|___|_________|___ schema_explorer.py   # Explore Schema
-
-|_________|___ config.py                     # Configurations File
-
-|_________|___ llm.py                        # Connection to llm
-
-|__ index.py                      # Main entry point
-
-|__ .gitignore                    # GitIgnore 
-
-|__ README.md                     # You're reading this
-
-|__ .env.development              # environment variables
-
-|__ requirements.txt              # includes Python dependencies
-
+project/
+│
+├── app/
+│   ├── functions/
+│   │   ├── data_modifier.py       # Modify Data
+│   │   ├── query_modifier.py      # Read Data
+│   │   └── schema_explorer.py     # Explore Schema
+│   ├── config.py                  # Configurations File
+│   ├── llm.py                     # Connection to llm
+│   └── index.py                   # Main entry point
+├── .gitignore                    # GitIgnore
+├── README.md                     # You're reading this
+├── .env.development              # Environment variables
+└── requirements.txt              # Includes Python dependencies
 
 
 ## Contributing
